@@ -40,7 +40,7 @@ export default function AmazonReviewScraper() {
         setLoading(true);
         setError(null);
         try {
-            const response = await axios.post('http://127.0.0.1:5001/scrape-amazon', { url });
+            const response = await axios.post('https://debuggingmortals-backend-1.onrender.com/scrape-amazon', { url });
             setReviews(response.data);
         } catch (error) {
             console.error("Error fetching reviews:", error);
@@ -125,5 +125,3 @@ export default function AmazonReviewScraper() {
         </div>
     );
 }
-
-
